@@ -1,0 +1,55 @@
+body {
+}
+#app {
+    color :white;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+}
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1em;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+label {
+    width: 100%;
+}
+li.radio {
+    width: 50%;
+}
+input {
+    width: 50%;
+}
+input.radio {
+    width: 10px;
+}
+.section-left {
+    width: 50vw;
+    height: 100vh;
+    background-color: blue;
+}
+.section-right {
+    width: 50vw;
+    height: 100vh;
+    background-color: red;
+}
+.red{
+    background-color: red;
+}
+.green {
+    background-color: green;
+}

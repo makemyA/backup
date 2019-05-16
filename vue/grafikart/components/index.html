@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Components</h1>
+        <!-- Ancienne façon de faire, l'évenement emit doit etre capté manuellement par le parent -->
+        <form-old :user="user" @submit="submited($event)"></form-old>
+        <!-- Nouvelle façon, l'évenement est automatiquement capté par le parent -->
+        <form-new v-model="user"></form-new>
+        <pre>{{user}}</pre>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.rect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+}
+.recap {
+    width: 50vw;
+    height: 10vh;
+    background-color: yellow;
+    color: black;
+}
+.yellow {
+    background-color: yellow;
+}
+.white {
+    background-color: white;
+}

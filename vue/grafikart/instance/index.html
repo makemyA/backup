@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{seconds}}</p>
+        <ul>
+            <li v-for="pokemon in pokemons">{{pokemon}}</li>
+        </ul>
+        <label for="pokemon">Ajoutez un Pokemon à votre pokedex</label>
+        <input type="text" id="pokemon" v-model="pokem" @keyup.enter="addPokemon">
+        <p>Vous avez choisi: {{pokem}}</p>
+        <button @click="destroy">Détruisez l'element</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <a :href=`${protocole+link}`>{{message}}</a>
+        <div v-show="success">V-show visible</div>
+        <div v-if="success">
+            <i @click="close" class="fas fa-window-close"></i>
+            <p>Bravo cela a marché</p>
+        </div>
+        <div v-else>Attention cela n'a pas marché</div>
+        <ul>
+            <li v-for= "person in persons">{{person}}</li>
+        </ul>
+        <form>
+            <label for="name">Indiquez votre nom</label>
+            <input type="text" id="name" v-model="name">
+            <p>Indiquez le nom d'un membre de votre famille</p>
+            <!-- <div v-for="person in persons">
+                <label for="person">{{person}}</label>
+                <input type="radio" id="person" name="family" @change="change(person)">
+            </div>
+            <p class="rect" v-model="person" name="family">{{pers}}</p>
+            <input type="submit" @click.prevent="submit"> -->
+
+            <!-- <input type="radio" id="one" value="Un" v-model="picked">
+            <label for="one">Un</label>
+            <br>
+            <input type="radio" id="two" value="Deux" v-model="picked">
+            <label for="two">Deux</label>
+            <br>
+            <span>Choisi : {{ picked }}</span> -->
+
+            <div v-for="person in persons">
+                <label for="person">{{person}}</label>
+                <input type="radio" id="person" name="family" :value="person" v-model="data">
+            </div>
+            <span>Choisi:{{data}}</span>
+            
+        </form>
+        <div class="recap" :class="{yellow: validForm, white: !validForm}">
+            <ul>
+                <li>nom: {{name}}</li>
+                <li>frère: {{data}}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.common.dev.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
